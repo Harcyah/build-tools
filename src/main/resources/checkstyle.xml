@@ -59,7 +59,7 @@
             <property name="tokens" value="VARIABLE_DEF,CLASS_DEF"/>
             <property name="ignoreStatic" value="false"/>
             <property name="allowedAbbreviationLength" value="1"/>
-            <property name="allowedAbbreviations" value="CSV,XML,DTO,GSON" />
+            <property name="allowedAbbreviations" value="CSV,XML,DTO,GSON,ID,URL,URI,PDF" />
         </module>
         <module name="UnusedImports"/>
         <module name="MissingOverride"/>
