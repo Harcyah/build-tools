@@ -5,12 +5,13 @@
     <property name="fileExtensions" value="java, properties, xml, yml"/>
     <module name="FileTabCharacter">
         <property name="eachLine" value="false"/>
+        <property name="fileExtensions" value="java,json"/>
+    </module>
+    <module name="LineLength">
+        <property name="max" value="180"/>
     </module>
     <module name="TreeWalker">
         <property name="tabWidth" value="4"/>
-        <module name="LineLength">
-            <property name="max" value="180"/>
-        </module>
         <module name="MethodName">
             <property name="format" value="^[a-z][a-z0-9][a-zA-Z0-9_]*$"/>
             <message key="name.invalidPattern" value="Method name ''{0}'' must match pattern ''{1}''."/>
@@ -38,6 +39,7 @@
         </module>
         <module name="EmptyLineSeparator">
             <property name="allowNoEmptyLineBetweenFields" value="true"/>
+            <property name="allowMultipleEmptyLines" value="false"/>
         </module>
         <module name="SeparatorWrap">
             <property name="tokens" value="DOT"/>
@@ -59,9 +61,17 @@
             <property name="tokens" value="VARIABLE_DEF,CLASS_DEF"/>
             <property name="ignoreStatic" value="false"/>
             <property name="allowedAbbreviationLength" value="1"/>
-            <property name="allowedAbbreviations" value="CSV,XML,DTO,GSON,ID,URL,URI,PDF" />
         </module>
         <module name="UnusedImports"/>
+        <module name="CustomImportOrder">
+            <property name="customImportOrderRules" value="THIRD_PARTY_PACKAGE###SPECIAL_IMPORTS###STANDARD_JAVA_PACKAGE###STATIC"/>
+            <property name="specialImportsRegExp" value="^javax\."/>
+            <property name="standardPackageRegExp" value="^java\."/>
+            <property name="sortImportsInGroupAlphabetically" value="true"/>
+            <property name="separateLineBetweenGroups" value="false"/>
+        </module>
+        <module name="AvoidStarImport"/>
+        <module name="RedundantImport"/>
         <module name="MissingOverride"/>
         <module name="VisibilityModifier">
             <property name="protectedAllowed" value="true"/>
@@ -79,4 +89,13 @@
             <property name="illegalPattern" value="true"/>
         </module>
     </module>
+
+    <!-- Need empty line after class/interface/enum end -->
+    <module name="RegexpMultiline">
+        <property name="format" value="[^\n{]\n\}\n"/>
+        <property name="message" value="Leave empty line before end of class/interface/enum!"/>
+        <property name="severity" value="error"/>
+        <property name="fileExtensions" value="java"/>
+    </module>
+
 </module>
