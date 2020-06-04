@@ -15,4 +15,29 @@
     <artifactId>build-tools</artifactId>
     <version>4.0.0</version>
 
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-enforcer-plugin</artifactId>
+                <version>3.0.0-M3</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>enforce</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <rules>
+                        <banDuplicatePomDependencyVersions/>
+                        <requireMavenVersion>
+                            <version>3.0.5</version>
+                        </requireMavenVersion>
+                    </rules>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
 </project>
