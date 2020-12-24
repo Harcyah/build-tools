@@ -27,7 +27,6 @@ under the License.
     <exclude-pattern>.*/target/generated-sources/java/protoc/.*</exclude-pattern>
     <exclude-pattern>.*/target/generated-test-sources/java/assertj/.*</exclude-pattern>
 
-    <rule ref="category/java/bestpractices.xml/AvoidUsingHardCodedIP" />
     <rule ref="category/java/bestpractices.xml/CheckResultSet" />
     <rule ref="category/java/bestpractices.xml/UnusedImports" />
     <rule ref="category/java/bestpractices.xml/UnusedFormalParameter" />
@@ -39,15 +38,9 @@ under the License.
     <rule ref="category/java/codestyle.xml/DuplicateImports" />
     <rule ref="category/java/codestyle.xml/ExtendsObject" />
     <rule ref="category/java/codestyle.xml/ForLoopShouldBeWhileLoop" />
-    <!--
-    <rule ref="category/java/codestyle.xml/TooManyStaticImports" />
-    -->
     <rule ref="category/java/codestyle.xml/UnnecessaryFullyQualifiedName" />
     <rule ref="category/java/codestyle.xml/UnnecessaryModifier" />
     <rule ref="category/java/codestyle.xml/UnnecessaryReturn" />
-    <!--
-    <rule ref="category/java/codestyle.xml/UselessParentheses" />
-    -->
     <rule ref="category/java/codestyle.xml/UselessQualifiedThis" />
 
     <rule ref="category/java/design.xml/CollapsibleIfStatements" />
@@ -88,5 +81,11 @@ under the License.
 
     <rule ref="category/java/performance.xml/BigIntegerInstantiation" />
     <rule ref="category/java/performance.xml/BooleanInstantiation" />
+
+    <!--
+    <rule ref="category/java/bestpractices.xml/AvoidUsingHardCodedIP" />
+    <rule ref="category/java/codestyle.xml/TooManyStaticImports" />
+    <rule ref="category/java/codestyle.xml/UselessParentheses" />
+    -->
 
 </ruleset>
